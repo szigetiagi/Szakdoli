@@ -1,0 +1,268 @@
+body {
+    background-color: #2e2e2e;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+    height: 90vh;
+    grid-template-rows: auto 1fr auto;
+    box-sizing: border-box;
+}
+
+.ActuallSituation {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid rgba(255, 236, 179, 0.7);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: justify;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.form-container {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+input, select, button {
+    padding: 0.8em;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input, select {
+    background-color: #3a3a3a;
+    color: #ffffff;
+}
+
+button {
+    background-color: #ffcc00;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e6b800;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        width: 100%;
+        height: 100vh;
+        gap: 5px;
+    }
+
+    .ActuallSituation,
+    .form-container {
+        padding: 15px;
+        font-size: 1em;
+        max-width: 100%;
+    }
+
+    input, select, button {
+        padding: 0.7em;
+        font-size: 0.9em;
+    }
+}
+
+.rankings {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.rankings table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.rankings th, .rankings td {
+    padding: 12px;
+    border: 1px solid #333;
+}
+
+.rankings th {
+    background-color: #FF8C00;
+    color: white;
+    font-weight: bold;
+}
+
+.rankings td {
+    background-color: #2e2e2e;
+    color: #ffffff;
+}
+
+.rankings tr:nth-child(even) td {
+    background-color: #1f1f1f;
+}
+
+.rankings tr:hover td {
+    background-color: #333333;
+}
+
+.rankings th, .rankings td {
+    text-align: center;
+}
+
+.play-again {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.play-again button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #FF8C00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.play-again button:hover {
+    background-color: #e67e00;
+}
+/* ActuallSituation - Main Text Box */
+.ActuallSituation {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid rgba(255, 236, 179, 0.7);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: justify;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Restart Button Styling */
+.restart-button {
+    width: 100%;
+    max-width: 900px; /* Match the width of ActuallSituation */
+    margin: 20px auto; /* Center align with some margin on top */
+    text-align: center;
+}
+
+.restart-button button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #FF8C00; /* Orange background */
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.restart-button button:hover {
+    background-color: #e67e00; /* Darker orange on hover */
+}
+/* Timer Display Styling */
+.timer-display {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    z-index: 1000; /* Ensures it appears on top of other elements */
+}
+.dice-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+#diceImage {
+    width: 60px; /* Adjust size as needed */
+    height: 60px;
+    margin-bottom: 10px; /* Space between dice image and button */
+}
+
+#rollButton {
+    padding: 10px;
+    font-size: 1em;
+    background-color: #FF8C00; /* Orange button */
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#rollButton:hover {
+    background-color: #e67e00; /* Darker orange on hover */
+}
+/* Adventure Text Container Styling */
+.adventure-container {
+    position: fixed;
+    top: 50px;
+    right: 100px;
+    width: 250px;
+    max-height: 80vh;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 236, 179, 0.7);
+    font-size: 0.9em;
+    line-height: 1.5;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999; /* Ensures it appears above other elements */
+}
+
+/* Responsive styling to adjust placement on smaller screens */
+@media (max-width: 768px) {
+    .adventure-container {
+        position: relative;
+        width: 90%;
+        margin: 20px auto;
+        right: 0;
+    }
+}

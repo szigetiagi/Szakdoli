@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sphinx Encounter - Hogwarts RPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Progress and Counters -->
+        <div class="ittTartok" id="ittTartok">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="final-square"></div>
+        </div>
+        <div class="status-bar">
+            <span id="timer">Timer</span>
+            <span id="HP">HP: 10</span>
+            <span id="Gyogyital">Gyógyital: 3</span>
+        </div>
+
+        <!-- ActuallSituation Area -->
+        <div class="ActuallSituation" id="ActuallSituation"></div>
+
+        <!-- Helper Poem (SegitoVersike) -->
+        <div class="SegitoVersike">
+            <p>Troll: Egy troll, ha rád talál...</p>
+            <!-- Continue the poem text as needed -->
+        </div>
+
+        <!-- Answer Buttons -->
+        <div class="answer-buttons">
+            <button onclick="submitAnswer('correct')">Correct Answer</button>
+            <button onclick="submitAnswer('wrong')">Wrong Answer 1</button>
+            <button onclick="submitAnswer('wrong')">Wrong Answer 2</button>
+            <button onclick="submitAnswer('wrong')">Wrong Answer 3</button>
+        </div>
+
+        <!-- Checklist and Enemy Box -->
+        <div class="EllenfelCheck">
+            <h3>Ellenfelek</h3>
+            <!-- Checklist dynamically updated -->
+        </div>
+
+        <div class="mindenEllenfel">
+            <h3>Encountered Enemies</h3>
+        </div>
+    </div>
+    <script src="gamecontroller.js"></script>
+</body>
+</html>

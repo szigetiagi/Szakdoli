@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Boss - Hogwarts RPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Progress and HP Counters -->
+        <div class="status-bar">
+            <span id="MyHP">My HP: 10</span>
+            <span id="ProfHP">Prof HP: 10</span>
+        </div>
+
+        <!-- ActuallSituation area for game updates -->
+        <div class="ActuallSituation" id="ActuallSituation"></div>
+
+        <!-- Helper Poem (SegitoVersike) -->
+        <div class="SegitoVersike">
+            <p>Védekezz vagy támadj, a kocka dönt ma...</p>
+        </div>
+
+        <!-- Attack and Defense Options -->
+        <div class="combat-options">
+            <button onclick="selectAction('attack')">Támadás</button>
+            <button onclick="selectAction('defend')">Oh ne, védekezzünk!</button>
+        </div>
+
+        <!-- Dice Roll Button -->
+        <div class="dice-roll">
+            <button id="diceButton" onclick="rollDiceForBoss()" style="display: none;">Roll Dice</button>
+        </div>
+    </div>
+    <!-- Dice Container -->
+<div class="dice-container">
+    <img id="diceImage" src="kocka/dice-six-faces-one.png" alt="Dice" />
+    <button id="rollButton">Roll Dice</button>
+</div>
+    <script src="gamecontroller.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Way to the Enemy - Hogwarts RPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Top Section for Progress and Counters -->
+        <div class="ittTartok" id="ittTartok">
+            <!-- Progress squares -->
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="final-square"></div>
+        </div>
+        <div class="status-bar">
+            <span id="timer">Timer</span>
+            <span id="HP">HP: 10</span>
+            <span id="Gyogyital">Gyógyital: 3</span>
+        </div>
+
+        <!-- ActuallSituation area (Main text box) -->
+        <div class="ActuallSituation" id="ActuallSituation"></div>
+
+        <!-- Helper Poem Box (SegitoVersike) -->
+        <div class="SegitoVersike">
+            <p>Troll: Egy troll, ha rád talál...</p>
+            <!-- Add the rest of the poem here as static text -->
+        </div>
+
+        <!-- Direction Buttons -->
+        <div class="direction-buttons">
+            <button onclick="goDirection('left')">Balra megyek!</button>
+            <button onclick="goDirection('forward')">Egyenesen tartok!</button>
+            <button onclick="goDirection('right')">Jobbra megyek!</button>
+        </div>
+
+        <!-- Checklist for encountered enemies (EllenfélCheck) -->
+        <div class="EllenfelCheck">
+            <h3>Ellenfelek</h3>
+            <!-- Checklist will be updated dynamically -->
+        </div>
+
+        <!-- Box for all encountered enemies (mindenEllenfél) -->
+        <div class="mindenEllenfel">
+            <h3>Encountered Enemies</h3>
+        </div>
+    </div>
+    
+    <script src="gamecontroller.js"></script>
+</body>
+</html>
